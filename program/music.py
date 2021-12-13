@@ -57,17 +57,17 @@ async def play(c: Client, m: Message):
     keyboard = InlineKeyboardMarkup(
         [
                     [
-                        InlineKeyboardButton(text="•ᴍᴇɴᴜ•", callback_data="cbmenu"),
+                        InlineKeyboardButton(text="القائمة", callback_data="cbmenu"),
                         ),
                         InlineKeyboardButton(
-                            "•ᴄʜᴀɴɴᴇʟ•", url=f"https://t.me/Takichanbot"
+                            "قناة المطور", url=f"https://t.me/is7sii"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            "•ᴏᴡɴᴇʀ•", url="https://t.me/Zxyune"
+                            "المطور", url="https://t.me/LLL3D"
                         ),
-                        InlineKeyboardButton(text="•ᴄʟᴏsᴇ•", callback_data="cls"),
+                        InlineKeyboardButton(text="إغلاق", callback_data="cls"),
                     ],
                 ]
             ),
@@ -128,7 +128,7 @@ async def play(c: Client, m: Message):
                 )
     if replied:
         if replied.audio or replied.voice:
-            suhu = await replied.reply("📥 **downloading audio...**")
+            suhu = await replied.reply("⚡️**جاري التحميل...**")
             dl = await replied.download()
             link = replied.link
             if replied.audio:
@@ -169,18 +169,18 @@ async def play(c: Client, m: Message):
                 )
              except Exception as e:
                 await suhu.delete()
-                await m.reply_text(f"🚫 error:\n\n» {e}")
+                await m.reply_text(f"🚫 خطأ:\n\n» {e}")
         else:
             if len(m.command) < 2:
                 await m.reply(
                     "» reply to an **audio file** or **give something to search.**"
                 )
             else:
-                suhu = await c.send_message(chat_id, "🔎 **Searching...**")
+                suhu = await c.send_message(chat_id, "🔎 **جاري البحث...**")
                 query = m.text.split(None, 1)[1]
                 search = ytsearch(query)
                 if search == 0:
-                    await suhu.edit("❌ **no results found.**")
+                    await suhu.edit("❌ **لم يتم العثور على نتائج.**")
                 else:
                     songname = search[0]
                     url = search[1]
@@ -214,7 +214,7 @@ async def play(c: Client, m: Message):
                                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                                 await m.reply_photo(
                                     photo=f"{IMG_2}",
-                                    caption=f"💡 **Music streaming started.**\n\n🏷 **Name:** [{songname}]({url})\n💭 **Chat:** `{chat_id}`\n💡 **Status:** `Playing`\n🎧 **Request by:** {requester}",
+                                    caption=f"💡 **تم التشغيل.**\n\n🏷 **Name:** [{songname}]({url})\n💭 **Chat:** `{chat_id}`\n💡 **الحالة:** `تشغيل`\n🎧 **طلب من قبل:** {requester}",
                                     reply_markup=keyboard,
                                 )
                             except Exception as ep:
@@ -227,11 +227,11 @@ async def play(c: Client, m: Message):
                 "» reply to an **audio file** or **give something to search.**"
             )
         else:
-            suhu = await c.send_message(chat_id, "🔎 **Searching...**")
+            suhu = await c.send_message(chat_id, "🔎 **جاري البحث...**")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             if search == 0:
-                await suhu.edit("❌ **no results found.**")
+                await suhu.edit("❌ **لم يتم العثور على نتائج.**")
             else:
                 songname = search[0]
                 url = search[1]
@@ -282,17 +282,17 @@ async def stream(c: Client, m: Message):
     keyboard = InlineKeyboardMarkup(
         [
                     [
-                        InlineKeyboardButton(text="•ᴍᴇɴᴜ•", callback_data="cbmenu"),
+                        InlineKeyboardButton(text="القائمة", callback_data="cbmenu"),
                         ),
                         InlineKeyboardButton(
-                            "•ᴄʜᴀɴɴᴇʟ•", url=f"https://t.me/Takichanbot"
+                            "قناة المطور", url=f"https://t.me/is7sii"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            "•ᴏᴡɴᴇʀ•", url="https://t.me/Zxyune"
+                            "المطور", url="https://t.me/LLL3D"
                         ),
-                        InlineKeyboardButton(text="•ᴄʟᴏsᴇ•", callback_data="cls"),
+                        InlineKeyboardButton(text="إغلاق", callback_data="cls"),
                     ],
                 ]
             ),
