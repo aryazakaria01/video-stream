@@ -28,10 +28,8 @@ bcl = InlineKeyboardMarkup(
 @authorized_users_only
 async def update_admin(client, message):
     global admins
-    new_admins = []
     new_ads = await client.get_chat_members(message.chat.id, filter="administrators")
-    for u in new_ads:
-        new_admins.append(u.user.id)
+    new_admins = [u.user.id for u in new_ads]
     admins[message.chat.id] = new_admins
     await message.reply_text(
         "✅ Bot **reloaded correctly !**\n✅ **Admin list** has been **updated !**"
@@ -77,13 +75,9 @@ async def skip(client, m: Message):
             items = [int(x) for x in skip.split(" ") if x.isdigit()]
             items.sort(reverse=True)
             for x in items:
-                if x == 0:
-                    pass
-                else:
+                if x != 0:
                     hm = await skip_item(chat_id, x)
-                    if hm == 0:
-                        pass
-                    else:
+                    if hm != 0:
                         OP = OP + "\n" + f"**#{x}** - {hm}"
             await m.reply(OP)
 

@@ -30,8 +30,8 @@ START_TIME = datetime.utcnow()
 START_TIME_ISO = START_TIME.replace(microsecond=0).isoformat()
 TIME_DURATION_UNITS = (
     ("week", 60 * 60 * 24 * 7),
-    ("day", 60 * 60 * 24),
-    ("hour", 60 * 60),
+    ("day", 60 ** 2 * 24),
+    ("hour", 60 ** 2),
     ("min", 60),
     ("sec", 1),
 )
@@ -53,8 +53,7 @@ async def _human_time_duration(seconds):
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f""" **
-""",
+        ' **\x1f',
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -63,10 +62,16 @@ async def start_(client: Client, message: Message):
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("❓ Basic Guide", callback_data="cbhowtouse")],
+                [
+                    InlineKeyboardButton(
+                        "❓ Basic Guide", callback_data="cbhowtouse"
+                    )
+                ],
                 [
                     InlineKeyboardButton("📚 الاوامر", callback_data="cbcmds"),
-                    InlineKeyboardButton("❤️ المطور", url=f"https://t.me/{OWNER_NAME}"),
+                    InlineKeyboardButton(
+                        "❤️ المطور", url=f"https://t.me/{OWNER_NAME}"
+                    ),
                 ],
                 [
                     InlineKeyboardButton(
@@ -78,7 +83,8 @@ async def start_(client: Client, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "السورس", url="https://github.com/levina-lab/video-stream"
+                        "السورس",
+                        url="https://github.com/levina-lab/video-stream",
                     )
                 ],
             ]
