@@ -89,3 +89,15 @@ python3 main.py # run the bot.
 # continue the host with screen or anything else, thanks for reading.
 ```
 
+# Credits 💖
+
+- [Levina](https://github.com/levina-lab) ``Dev``
+- [Zxce3](https://github.com/Zxce3) ``Dev``
+- [DoellBarr](https://github.com/DoellBarr) ``Dev``
+- [tofikdn](https://github.com/tofikdn) ``Dev``
+- [Hunter-XDD](https://github.com/Hunter-XDD) ``Dev``
+- [Laky's](https://github.com/Laky-64) for [``py-tgcalls``](https://github.com/pytgcalls/pytgcalls)
+- [Dan](https://github.com/delivrance) for [``Pyrogram``](https://github.com/pyrogram)
+
+### Support & Updates 🎑
+<a href="https://t.me/VeezSupportGroup"><img src="https://img.shields.io/badge/Join-Group%20Support-blue.svg?style=for-the-badge&logo=Telegram"></a> <a href="https://t.me/levinachannel"><img src="https://img.shields.io/badge/Join-Updates%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
