@@ -63,17 +63,17 @@ async def vplay(c: Client, m: Message):
     keyboard = InlineKeyboardMarkup(
         [
                     [
-                        InlineKeyboardButton(text="•ᴍᴇɴᴜ•", callback_data="cbmenu"),
+                        InlineKeyboardButton(text="القائمة", callback_data="cbmenu"),
                         ),
                         InlineKeyboardButton(
-                            "•ᴄʜᴀɴɴᴇʟ•", url=f"https://t.me/Takichanbot"
+                            "قناة المطور", url=f"https://t.me/is7sii"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            "•ᴏᴡɴᴇʀ•", url="https://t.me/Zxyune"
+                            "المطور", url="https://t.me/LLL3D"
                         ),
-                        InlineKeyboardButton(text="•ᴄʟᴏsᴇ•", callback_data="cls"),
+                        InlineKeyboardButton(text="إغلاق", callback_data="cls"),
                     ],
                 ]
             ),
@@ -135,7 +135,7 @@ async def vplay(c: Client, m: Message):
 
     if replied:
         if replied.video or replied.document:
-            loser = await replied.reply("📥 **downloading video...**")
+            loser = await replied.reply("📥 **جاري تحميل الفيديو...**")
             dl = await replied.download()
             link = replied.link
             if len(m.command) < 2:
@@ -197,13 +197,13 @@ async def vplay(c: Client, m: Message):
                     "» reply to an **video file** or **give something to search.**"
                 )
             else:
-                loser = await c.send_message(chat_id, "🔎 **Searching...**")
+                loser = await c.send_message(chat_id, "🔎 **جاري البحث...**")
                 query = m.text.split(None, 1)[1]
                 search = ytsearch(query)
                 Q = 720
                 amaze = HighQualityVideo()
                 if search == 0:
-                    await loser.edit("❌ **no results found.**")
+                    await loser.edit("❌ **لم يتم العثور على نتائج.**")
                 else:
                     songname = search[0]
                     url = search[1]
@@ -249,7 +249,7 @@ async def vplay(c: Client, m: Message):
     else:
         if len(m.command) < 2:
             await m.reply(
-                "» reply to an **video file** or **give something to search.**"
+                "» الرد على **video file** or **اعطني اي شي للبحث.**"
             )
         else:
             loser = await c.send_message(chat_id, "🔎 **Searching...**")
@@ -258,7 +258,7 @@ async def vplay(c: Client, m: Message):
             Q = 720
             amaze = HighQualityVideo()
             if search == 0:
-                await loser.edit("❌ **no results found.**")
+                await loser.edit("❌ **مالقيت شيء.**")
             else:
                 songname = search[0]
                 url = search[1]
@@ -309,17 +309,17 @@ async def vstream(c: Client, m: Message):
     keyboard = InlineKeyboardMarkup(
         [
                     [
-                        InlineKeyboardButton(text="•ᴍᴇɴᴜ•", callback_data="cbmenu"),
+                        InlineKeyboardButton(text="القائمة", callback_data="cbmenu"),
                         ),
                         InlineKeyboardButton(
-                            "•ᴄʜᴀɴɴᴇʟ•", url=f"https://t.me/Takichanbot"
+                            "قناة المطور", url=f"https://t.me/is7sii"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            "•ᴏᴡɴᴇʀ•", url="https://t.me/Zxyune"
+                            "المطور", url="https://t.me/LLL3D"
                         ),
-                        InlineKeyboardButton(text="•ᴄʟᴏsᴇ•", callback_data="cls"),
+                        InlineKeyboardButton(text="إغلاق", callback_data="cls"),
                     ],
                 ]
             ),
